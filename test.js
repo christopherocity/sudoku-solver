@@ -3,7 +3,7 @@ function sudoku(puzzle) {
         for (let i = 0; i < 9; i++) {
             for (let j = 0; j < 9; j++) {
                 if (puzzle[i][j] === 0) {
-                    let candidates = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
+                    let candidates = [1, 2, 3, 4, 5, 6, 7, 8, 9];
                     for (let z = 0; z < 9; z++) {
                         candidates = candidates.filter(num => num !== puzzle[z][j] && num !== puzzle[i][z]);
                     }
