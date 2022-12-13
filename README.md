@@ -2,4 +2,4 @@
  
  ## Run
  ### Install Node.js
- ### node play.js
+ ### node test.js
