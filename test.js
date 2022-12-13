@@ -5,7 +5,7 @@ function sudoku(puzzle) {
                 if (puzzle[i][j] === 0) {
                     let candidates = [1, 2, 3, 4, 5, 6, 7, 8, 9];
                     for (let z = 0; z < 9; z++) {
-                        candidates = candidates.filter(num => num !== puzzle[z][j] && num !== puzzle[i][z]);
+                        candidates = candidates.filter(num => ![puzzle[i][z], puzzle[z][j]].includes(num));
                     }
 
                     const iMax = Math.ceil((i + 1) / 3) * 3;
